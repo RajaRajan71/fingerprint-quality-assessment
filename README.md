@@ -90,5 +90,7 @@ python test_quality.py
 streamlit run quality_app.py
 
 
-📊 Summary of QC Report QuestionsBlur Threshold Rationale: Set to 10.0 based on empirically measured variance boundaries distinguishing motion-blurred captures ($\text{variance} < 8$) from in-focus ridge structures ($\text{variance} > 25$).NFIQ2 Limitations: NFIQ2 relies on spatial frequencies specific to 500 DPI rolled/flat contact impressions. It misinterprets phone background pixels, 3D perspective distortion, and variable smartphone scale as biometric degradation.Special Considerations for Worn Fingerprints: For manual laborers or agricultural workers with faint ridges, the system dynamically drops the high-frequency Gabor weight, boosts local contrast via CLAHE, and prompts for secondary finger enrollment if clarity thresholds remain unmet.📜 LicenseThis project is open source and available under the MIT License.
+### 📊 Summary of QC Report Questions Blur Threshold Rationale: Set to 10.0 based on empirically measured variance boundaries distinguishing motion-blurred captures ($\text{variance} < 8$) from in-focus ridge structures ($\text{variance} > 25$).NFIQ2 Limitations: NFIQ2 relies on spatial frequencies specific to 500 DPI rolled/flat contact impressions. It misinterprets phone background pixels, 3D perspective distortion, and variable smartphone scale as biometric degradation.Special Considerations for Worn Fingerprints: For manual laborers or agricultural workers with faint ridges, the system dynamically drops the high-frequency Gabor weight, boosts local contrast via CLAHE, and prompts for secondary finger enrollment if clarity thresholds remain unmet.
+
+### 📜 License This project is open source and available under the MIT License.
 
