@@ -1,0 +1,16 @@
+# Virtual environment
+myenv/
+venv/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit local config
+.streamlit/
+
+# OS metadata
+.DS_Store
+Thumbs.db
