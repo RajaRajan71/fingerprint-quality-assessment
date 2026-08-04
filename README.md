@@ -66,13 +66,12 @@ Each stage is optimized for low-latency client-side or edge processing:
 
 ## 🚀 Local Installation & Execution
 
-### 1. Clone & Environment Setup
 ```bash
-# Clone repository
+# 1. Clone repository
 git clone [https://github.com/RajaRajan71/fingerprint-quality-assessment.git](https://github.com/RajaRajan71/fingerprint-quality-assessment.git)
 cd fingerprint-quality-assessment
 
-# Create and activate virtual environment
+# 2. Create and activate virtual environment
 python -m venv myenv
 
 # On Windows:
@@ -81,9 +80,15 @@ myenv\Scripts\activate
 # On macOS/Linux:
 source myenv/bin/activate
 
-# Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
+# 4. Run validation batch test (evaluates all 20 test images)
+python test_quality.py
+
+# 5. Launch interactive Streamlit web UI
+streamlit run quality_app.py
 
 
+📊 Summary of QC Report QuestionsBlur Threshold Rationale: Set to 10.0 based on empirically measured variance boundaries distinguishing motion-blurred captures ($\text{variance} < 8$) from in-focus ridge structures ($\text{variance} > 25$).NFIQ2 Limitations: NFIQ2 relies on spatial frequencies specific to 500 DPI rolled/flat contact impressions. It misinterprets phone background pixels, 3D perspective distortion, and variable smartphone scale as biometric degradation.Special Considerations for Worn Fingerprints: For manual laborers or agricultural workers with faint ridges, the system dynamically drops the high-frequency Gabor weight, boosts local contrast via CLAHE, and prompts for secondary finger enrollment if clarity thresholds remain unmet.📜 LicenseThis project is open source and available under the MIT License.
 
