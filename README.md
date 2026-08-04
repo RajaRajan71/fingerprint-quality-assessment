@@ -53,3 +53,37 @@ Each stage is optimized for low-latency client-side or edge processing:
 ---
 
 ## 📂 Repository Structure
+
+├── quality_assessment.py  # Core metric functions & quality_gate() pipeline
+├── quality_app.py         # Interactive Streamlit Web Interface
+├── test_quality.py        # Pipeline validation script evaluating 20 test cases
+├── make_report.py         # Automated PDF report generator using ReportLab
+├── report.pdf             # Technical QC report covering calibration & edge cases
+├── requirements.txt       # Deployment dependency configuration
+└── README.md              # Project documentation
+
+---
+
+## 🚀 Local Installation & Execution
+
+### 1. Clone & Environment Setup
+```bash
+# Clone repository
+git clone [https://github.com/RajaRajan71/fingerprint-quality-assessment.git](https://github.com/RajaRajan71/fingerprint-quality-assessment.git)
+cd fingerprint-quality-assessment
+
+# Create and activate virtual environment
+python -m venv myenv
+
+# On Windows:
+myenv\Scripts\activate
+
+# On macOS/Linux:
+source myenv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+
+
+
