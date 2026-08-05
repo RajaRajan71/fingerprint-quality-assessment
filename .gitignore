@@ -14,3 +14,6 @@ __pycache__/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Generated PDF outputs
+report.pdf
